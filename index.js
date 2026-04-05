@@ -23,7 +23,6 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 //mangoo db connnection
-// const DB = "mongodb+srv://denuka456:dbTest123@cluster0.hqehkcf.mongodb.net/?appName=Cluster0"
 const DB = process.env.MONGO_URI;
 
 
