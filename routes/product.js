@@ -127,7 +127,7 @@ productRouter.get('/api/products-by-subcategory/:subcategory', async (req, res) 
     try {
 
         const { subcategory } = req.params;
-        const products = await Product.fing({ subcategory });
+        const products = await Product.find({ subcategory });
         if (!products || products.length == 0) {
             return res.status(404).json({ msg: "No products found in this subcategory" });
 
