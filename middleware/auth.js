@@ -35,7 +35,7 @@ const auth = async(req,res,next)=>{
     next();
 
 
-    }catch(error){
+    }catch(e){
 
         res.status(500).json({error: e.message});
     }
@@ -49,7 +49,7 @@ const vendorAuth = (req, res, next)=>{
     try{
 
          ///check if. the user making the request is a vendor (by checking the 'role' property)
-    if(!req.user.role || req.user.role !== 'vendor'){
+    if(!req.user || req.user.role !== 'vendor'){
         /// if the user is not a vendor, return 403 (Forbidden)(respone with an error message)
         return res.status(403).json({msg: "Access denied, only vendors are allowed"});
 
