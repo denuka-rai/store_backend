@@ -124,7 +124,7 @@ productRouter.get('/api/top-rated-products', async (req, res) => {
 
 productRouter.get('/api/products-by-subcategory/:subcategory', async (req, res) => {
 
-    try {
+    try { 
 
         const { subcategory } = req.params;
         const products = await Product.find({ subCategory: subcategory});
