@@ -1,6 +1,7 @@
 const express = require('express');
 const Order = require('../models/order');
 const orderRouter = express.Router();
+require('dotenv').config();
 const { auth, vendorAuth } = require('../middleware/auth');
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
