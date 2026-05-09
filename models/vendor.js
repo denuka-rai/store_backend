@@ -19,6 +19,19 @@ const vendorSchema = mongoose.Schema({
         }
      },
 
+     storeName:{
+        type: String,
+        default: "",
+     },
+     storeImage:{
+         type: String,
+         default: "",
+     },
+     storeDescription:{
+        type: String,
+        default:'',
+     },
+
      state: {
        type: String,
        default: "",
@@ -33,6 +46,10 @@ const vendorSchema = mongoose.Schema({
         type: String,
         default: "",
 
+     }, 
+       token:{
+        type: String,
+        default: "",
      },
       role:{
         type: String,
